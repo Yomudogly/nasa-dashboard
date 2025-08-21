@@ -11,6 +11,7 @@ A stunning, interactive web application for visualizing Near-Earth Objects (NEOs
 ## ✨ Features
 
 ### 🚀 **Interactive Space Visualization**
+
 - Large rotating Earth SVG with detailed continents and atmosphere
 - Real-time NEO objects floating around Earth with orbital mechanics
 - 4 distinct SVG object shapes (asteroid, comet, rocky, metallic)
@@ -18,6 +19,7 @@ A stunning, interactive web application for visualizing Near-Earth Objects (NEOs
 - Smooth floating animations with varied movement patterns
 
 ### 🎨 **Modern UI/UX**
+
 - Glassmorphism design with floating panels
 - Deep space theme with custom animations
 - Auto-scroll functionality in object lists
@@ -25,12 +27,14 @@ A stunning, interactive web application for visualizing Near-Earth Objects (NEOs
 - Clean, readable object information displays
 
 ### ⚡ **High Performance**
+
 - Redis caching for API responses
 - Optimized React components with proper state management
 - Lazy loading and efficient rendering
 - Real-time data updates without page refresh
 
 ### 🛠 **Technical Excellence**
+
 - Full TypeScript implementation
 - Comprehensive error handling
 - Docker containerization
@@ -40,6 +44,7 @@ A stunning, interactive web application for visualizing Near-Earth Objects (NEOs
 ## 🏗 Architecture
 
 ### Frontend (React + Vite)
+
 - **Framework**: React 18 with TypeScript
 - **Build Tool**: Vite for fast development and optimized builds
 - **Styling**: Tailwind CSS v3 with custom glassmorphism components
@@ -47,6 +52,7 @@ A stunning, interactive web application for visualizing Near-Earth Objects (NEOs
 - **Testing**: Jest + Playwright for comprehensive testing
 
 ### Backend (Fastify + Node.js)
+
 - **Framework**: Fastify with TypeScript for high-performance API
 - **Caching**: Redis for optimized data storage and retrieval
 - **API Integration**: NASA NeoWs API with robust error handling
@@ -55,6 +61,7 @@ A stunning, interactive web application for visualizing Near-Earth Objects (NEOs
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18+
 - Redis (for caching)
 - NASA API Key ([Get one here](https://api.nasa.gov/))
@@ -62,12 +69,14 @@ A stunning, interactive web application for visualizing Near-Earth Objects (NEOs
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Yomudogly/nasa-dashboard.git
    cd nasa-dashboard
    ```
 
 2. **Set up environment variables**
+
    ```bash
    # Backend (.env in backend/ folder)
    NASA_API_KEY=your_nasa_api_key_here
@@ -79,6 +88,7 @@ A stunning, interactive web application for visualizing Near-Earth Objects (NEOs
    ```
 
 3. **Install dependencies**
+
    ```bash
    # Backend
    cd backend && npm install
@@ -88,6 +98,7 @@ A stunning, interactive web application for visualizing Near-Earth Objects (NEOs
    ```
 
 4. **Start the application**
+
    ```bash
    # Backend (Terminal 1)
    cd backend && npm run dev
@@ -97,9 +108,10 @@ A stunning, interactive web application for visualizing Near-Earth Objects (NEOs
    ```
 
 5. **Open your browser**
-   - Frontend: http://localhost:5173
-   - Backend API: http://localhost:3001
-   - API Documentation: http://localhost:3001/docs
+
+   - Frontend: <http://localhost:5173>
+   - Backend API: <http://localhost:3001>
+   - API Documentation: <http://localhost:3001/docs>
 
 ### 🐳 Docker Setup
 
@@ -115,7 +127,7 @@ docker build -t nasa-dashboard-frontend ./frontend
 ## 📱 Usage
 
 1. **Select a Date**: Use the date picker to choose when to view NEOs
-2. **Interactive Visualization**: 
+2. **Interactive Visualization**:
    - Hover over objects to highlight them
    - Click objects to select and auto-scroll to details
    - Watch objects scale 3x when selected
@@ -125,6 +137,7 @@ docker build -t nasa-dashboard-frontend ./frontend
 ## 🛠 Development
 
 ### Frontend Development
+
 ```bash
 cd frontend
 npm run dev          # Start development server
@@ -134,6 +147,7 @@ npm run lint         # Lint code
 ```
 
 ### Backend Development
+
 ```bash
 cd backend
 npm run dev          # Start development server
@@ -146,7 +160,7 @@ npm start            # Start production server
 
 The backend provides a RESTful API with the following endpoints:
 
-- `GET /api/neo` - Fetch Near-Earth Objects
+- `GET /api/v1/objects` - Fetch Near-Earth Objects
 - `GET /health` - Health check
 - `GET /docs` - Interactive API documentation
 
@@ -167,7 +181,7 @@ npm run test:e2e
 
 ## 📁 Project Structure
 
-```
+```md
 nasa-dashboard/
 ├── backend/                 # Fastify API server
 │   ├── src/
@@ -205,10 +219,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Fastify](https://www.fastify.io/) for the high-performance backend
 - [Tailwind CSS](https://tailwindcss.com/) for the styling system
 
-## 🌟 Screenshots
-
-*Add screenshots of your application here*
-
 ---
-
-**Built with ❤️ for space enthusiasts and developers alike** 🚀
