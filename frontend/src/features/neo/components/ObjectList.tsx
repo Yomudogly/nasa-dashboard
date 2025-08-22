@@ -31,17 +31,22 @@ export const ObjectList: React.FC<ObjectListProps> = ({
       const selectedElement = itemRefs.current[selectedId];
       const listContainer = listRef.current;
       
-      // Calculate position to center the item
-      const itemTop = selectedElement.offsetTop;
-      const itemHeight = selectedElement.offsetHeight;
-      const listHeight = listContainer.clientHeight;
-      
-      const scrollPosition = itemTop - listHeight  + (itemHeight / 2);
-      
-      listContainer.scrollTo({
-        top: scrollPosition,
-        behavior: 'smooth'
-      });
+      // Add a small delay to ensure DOM is fully rendered
+      setTimeout(() => {
+        // Get the container's bounding rect for accurate positioning
+        const containerRect = listContainer.getBoundingClientRect();
+        const elementRect = selectedElement.getBoundingClientRect();
+        
+        // Calculate scroll position relative to container
+        const currentScrollTop = listContainer.scrollTop;
+        const elementOffsetFromContainer = elementRect.top - containerRect.top;
+        const targetScrollTop = currentScrollTop + elementOffsetFromContainer;
+        
+        listContainer.scrollTo({
+          top: targetScrollTop,
+          behavior: 'smooth'
+        });
+      }, 10);
     }
   }, [selectedId]);
 
