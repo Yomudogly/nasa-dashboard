@@ -2,6 +2,12 @@
 
 A stunning, interactive web application for visualizing Near-Earth Objects (NEOs) using NASA's NeoWs API. Built with modern web technologies and featuring a beautiful space-themed interface.
 
+## 📷 Screenshots & Demo
+
+![NASA Dashboard Screenshot](nasa-dashboard.webp)
+
+![NASA Dashboard Demo](nasa-dashboard.gif)
+
 ![NASA Dashboard](https://img.shields.io/badge/status-active-brightgreen)
 ![React](https://img.shields.io/badge/React-18+-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue)
